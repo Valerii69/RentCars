@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/RentCars/static/css/main.3e64e67a.css",
-    "main.js": "/RentCars/static/js/main.8156b7ce.js",
-    "static/media/cool-sports-car.png": "/RentCars/static/media/cool-sports-car.c2e54c61f6a62f8221fd.png",
+    "main.css": "/RentCars/static/css/main.cd2e038f.css",
+    "main.js": "/RentCars/static/js/main.5f5c92cc.js",
+    "static/media/logo.png": "/RentCars/static/media/logo.c5b6d142443002481d47.png",
+    "static/media/bgrLogo.webp": "/RentCars/static/media/bgrLogo.2f5a06ee2f75c8f734f4.webp",
     "index.html": "/RentCars/index.html",
     "static/media/normal.svg": "/RentCars/static/media/normal.282d936f414f4c6884ab9306a91dad67.svg",
     "static/media/active.svg": "/RentCars/static/media/active.97847e9195943f61800c97807e735d4f.svg",
-    "main.3e64e67a.css.map": "/RentCars/static/css/main.3e64e67a.css.map",
-    "main.8156b7ce.js.map": "/RentCars/static/js/main.8156b7ce.js.map"
+    "main.cd2e038f.css.map": "/RentCars/static/css/main.cd2e038f.css.map",
+    "main.5f5c92cc.js.map": "/RentCars/static/js/main.5f5c92cc.js.map"
   },
   "entrypoints": [
-    "static/css/main.3e64e67a.css",
-    "static/js/main.8156b7ce.js"
+    "static/css/main.cd2e038f.css",
+    "static/js/main.5f5c92cc.js"
   ]
 }
