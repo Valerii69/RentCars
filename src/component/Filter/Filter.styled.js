@@ -1,10 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Form = styled.form`
   display: flex;
-  justify-content: space-between;
+  /* width: 162px; */
+  justify-content: space-evenly;
   align-items: center;
-  margin: 40px 200px;
+  margin: 40px 0px;
 `;
 
 export const LabelBox = styled.div`
@@ -129,4 +130,20 @@ export const DropdownPriceList = styled.ul`
   line-height: 1.25;
   font-family: Manrope;
   color: rgba(18, 20, 23, 0.2);
+`;
+
+export const ChevronDown = styled.svg`
+  position: absolute;
+  top: 11px;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+`;
+
+export const ChevronUp = styled.svg`
+  position: absolute;
+  top: 11px;
+  right: 16px;
+  width: 20px;
+  height: 20px;
 `;

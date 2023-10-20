@@ -1,26 +1,40 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+import carImage from '../images/bgrLogo.webp';
 
 export const Box = styled.div`
   text-align: center;
-  padding: 20px;
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  justify-content: center;
+  /* padding: 30px; */
 `;
 
 export const Title = styled.h1`
-  font-weight: 500;
-  font-size: 25px;
+  font-weight: 600;
+  font-size: 80px;
   line-height: 1.33;
-  color: rgba(18, 20, 23, 1);
-  margin-bottom: 10px;
+  /* padding: 30px 100px; */
+  color: #ffff;
+  margin-bottom: 30px;
   word-spacing: 3px;
 `;
 
 export const Description = styled.p`
   font-weight: 500;
-  font-size: 18px;
+  display: inline-block;
+  font-size: 26px;
   line-height: 1.33;
-  color: rgba(18, 20, 23, 1);
-  margin-bottom: 20px;
+  color: #ffff;
+  /* padding: 30px 100px; */
+  margin-bottom: 30px;
   word-spacing: 3px;
+`;
+
+export const Span = styled.span`
+  color: #f4b10a;
+  font-size: 30px;
+  line-height: 1.33;
 `;
 
 export const Headline = styled.h2`
@@ -29,16 +43,40 @@ export const Headline = styled.h2`
   line-height: 1.43;
   color: rgba(18, 20, 23, 1);
   word-spacing: 3px;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 `;
 
-export const FlexContainer = styled.ul`
-  margin-bottom: 20px;
+// export const FlexContainer = styled.div`
+//   margin-bottom: 20px;
+//   display: flex;
+// `;
+
+export const FlexContainer = styled.section`
   display: flex;
-`;
+  padding: 30px 100px;
+  justify-content: center;
+  width: 1440px;
+  /* height: 1926px; */
+  flex-direction: column;
 
-export const Image = styled.ul`
-  margin-bottom: 20px;
+  align-items: center;
+  background-image: url(${carImage});
+  background-size: cover;
+  background-position: center center center;
+  border-radius: 24px;
+  box-shadow: rgba(0, 0, 0, 0.12) 4px 1px 4px, rgba(0, 0, 0, 0.06) 0px 4px 4px,
+    rgba(0, 0, 0, 0.16) 1px 4px 6px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: -1;
+    display: block;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+  }
 `;
 
 export const Advantages = styled.ul`

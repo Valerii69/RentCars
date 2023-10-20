@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import {
   Button,
   DropdownList,
@@ -10,23 +10,25 @@ import {
   InputPrice,
   LabelBox,
   Text,
-} from "./Filter.styled";
+} from './Filter.styled';
+import { ChevronDown } from '../../images/chevron-down.svg';
+import { ChevronUp } from '../../images/chevron-up.svg';
 
-const baseURL = "https://648ca3ae8620b8bae7ed2c50.mockapi.io/adverts";
+const baseURL = 'https://648ca3ae8620b8bae7ed2c50.mockapi.io/adverts';
 
 export const Filter = () => {
   const [cars, setCars] = useState([]);
 
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   const [isListOpen, setIsListOpen] = useState(false);
-  const [, setSelectedCar] = useState(null);
+  const [setSelectedCar] = useState(null);
 
-  const [inputPriceValue, setInputPriceValue] = useState("");
+  const [inputPriceValue, setInputPriceValue] = useState('');
   const [isListPriceOpen, setIsListPriceOpen] = useState(false);
   const [, setSelectedPriceCar] = useState(null);
 
-  const [mileageFrom, setMileageFrom] = useState("");
-  const [mileageTo, setMileageTo] = useState("");
+  const [mileageFrom, setMileageFrom] = useState('');
+  const [mileageTo, setMileageTo] = useState('');
 
   useEffect(() => {
     const fetchCars = async () => {
@@ -40,10 +42,10 @@ export const Filter = () => {
     fetchCars();
   }, []);
 
-  const uniqueMakes = [...new Set(cars.map((car) => car.make))];
-  const uniquePrice = [...new Set(cars.map((car) => car.rentalPrice))];
+  const uniqueMakes = [...new Set(cars.map(car => car.make))];
+  const uniquePrice = [...new Set(cars.map(car => car.rentalPrice))];
 
-  const handleInputChange = (e) => {
+  const handleInputChange = e => {
     e.preventDefault();
     setInputValue(e.target.value);
     setIsListOpen(true);
@@ -53,13 +55,13 @@ export const Filter = () => {
     setIsListOpen(!isListOpen);
   };
 
-  const handleCarSelect = (carMake) => {
+  const handleCarSelect = carMake => {
     setInputValue(carMake);
     setSelectedCar(carMake);
     setIsListOpen(false);
   };
 
-  const handleInputPriceChange = (e) => {
+  const handleInputPriceChange = e => {
     e.preventDefault();
     setInputPriceValue(e.target.value);
     setIsListPriceOpen(true);
@@ -69,24 +71,24 @@ export const Filter = () => {
     setIsListPriceOpen(!isListPriceOpen);
   };
 
-  const handleCarPriceSelect = (rentalPrice) => {
+  const handleCarPriceSelect = rentalPrice => {
     setInputPriceValue(rentalPrice);
     setSelectedPriceCar(rentalPrice);
     setIsListPriceOpen(false);
   };
 
-  const handleMileageFromChange = (e) => {
+  const handleMileageFromChange = e => {
     e.preventDefault();
     setMileageFrom(e.target.value);
   };
 
-  const handleMileageToChange = (e) => {
+  const handleMileageToChange = e => {
     e.preventDefault();
     setMileageTo(e.target.value);
   };
 
-  const brandIcon = isListOpen ? "⇧" : "⇩";
-  const priceIcon = isListPriceOpen ? "⇧" : "⇩";
+  const brandIcon = isListOpen ? '⇧' : '⇩';
+  const priceIcon = isListPriceOpen ? '⇧' : '⇩';
 
   return (
     <>
@@ -109,7 +111,7 @@ export const Filter = () => {
           <DropdownList>
             {uniqueMakes
               .filter(
-                (make) =>
+                make =>
                   make &&
                   make.toLowerCase().startsWith(inputValue.toLowerCase())
               )
@@ -138,7 +140,7 @@ export const Filter = () => {
           <DropdownPriceList>
             {uniquePrice
               .filter(
-                (rentalPrice) =>
+                rentalPrice =>
                   rentalPrice &&
                   rentalPrice
                     .toLowerCase()
