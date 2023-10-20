@@ -11,8 +11,9 @@ import {
   LabelBox,
   Text,
 } from './Filter.styled';
-import { ChevronDown } from '../../images/chevron-down.svg';
-import { ChevronUp } from '../../images/chevron-up.svg';
+
+// import { ChevronDown } from '../../images/chevron-down.svg';
+// import { ChevronUp } from '../../images/chevron-up.svg';
 
 const baseURL = 'https://648ca3ae8620b8bae7ed2c50.mockapi.io/adverts';
 
