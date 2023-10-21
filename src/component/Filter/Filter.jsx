@@ -10,10 +10,12 @@ import {
   InputPrice,
   LabelBox,
   Text,
+  // ChevronDown,
+  // ChevronUp,
 } from './Filter.styled';
 
-// import { ChevronDown } from '../../images/chevron-down.svg';
-// import { ChevronUp } from '../../images/chevron-up.svg';
+import { ReactComponent as DownChevron } from '../../icons/chevron-down.svg';
+import { ReactComponent as UpChevron } from '../../icons/chevron-up.svg';
 
 const baseURL = 'https://648ca3ae8620b8bae7ed2c50.mockapi.io/adverts';
 
@@ -88,8 +90,16 @@ export const Filter = () => {
     setMileageTo(e.target.value);
   };
 
-  const brandIcon = isListOpen ? '⇧' : '⇩';
-  const priceIcon = isListPriceOpen ? '⇧' : '⇩';
+  const brandIcon = isListOpen ? (
+    <svg src={DownChevron} alt="Chevron Down" width="20px" height="20px" />
+  ) : (
+    <svg src={UpChevron} alt="Chevron Up" width="20px" height="20px" />
+  );
+  const priceIcon = isListPriceOpen ? (
+    <svg src={DownChevron} alt="Chevron Down" width="20px" height="20px" />
+  ) : (
+    <svg src={UpChevron} alt="Chevron Up" width="20px" height="20px" />
+  );
 
   return (
     <>
@@ -97,15 +107,16 @@ export const Filter = () => {
         <label>
           <Text>Car brand</Text>
           <LabelBox>
+            {' '}
             <InputBrand
               placeholder="Enter the text"
               type="text"
               value={inputValue}
               onChange={handleInputChange}
             />
-            <button type="button" onClick={toggleList}>
+            <select type="select" onClick={toggleList}>
               {brandIcon}
-            </button>
+            </select>{' '}
           </LabelBox>
         </label>
         {isListOpen && (
@@ -132,9 +143,9 @@ export const Filter = () => {
               value={inputPriceValue}
               onChange={handleInputPriceChange}
             />
-            <button type="button" onClick={togglePriceList}>
+            <select type="select" onClick={togglePriceList}>
               {priceIcon}
-            </button>
+            </select>
           </LabelBox>
         </label>
         {isListPriceOpen && (

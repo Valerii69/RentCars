@@ -13,15 +13,15 @@ export const Collection = styled.div`
   width: 1184px;
   height: 426px;
   /* align-items: flex-start; */
-  gap: 29px;
+  /* gap: 29px; */
   column-gap: 50px;
   flex-shrink: 0;
 `;
 
 export const List = styled.ul`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  /* align-items: center; */
   flex-wrap: wrap;
   padding: 0px;
 `;
@@ -29,11 +29,12 @@ export const List = styled.ul`
 export const Item = styled.li`
   display: inline-block;
   width: 274px;
-  height: 426px;
+  /* height: 426px; */
   text-decoration: none;
   position: relative;
 
-  margin-right: 29px;
+  /* gap: 29px; */
+  /* margin-right: 29px; */
   /* &:nth-child(4n) {
     margin-right: 0;
   } */
@@ -44,8 +45,11 @@ export const Item = styled.li`
 
 export const Img = styled.img`
   border-radius: 14px;
-  object-fit: contain;
+  object-fit: caver;
+
   margin-bottom: 14px;
+  width: 274px;
+  height: 205px;
 `;
 
 export const Title = styled.div`

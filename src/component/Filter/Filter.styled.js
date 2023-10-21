@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { ReactComponent as DownChevron } from '../../icons/chevron-down.svg';
+import { ReactComponent as UpChevron } from '../../icons/chevron-up.svg';
 
 export const Form = styled.form`
   display: flex;
@@ -12,6 +14,7 @@ export const LabelBox = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 `;
 
 export const Text = styled.span`
@@ -23,6 +26,7 @@ export const Text = styled.span`
 `;
 
 export const InputBrand = styled.input`
+  /* position: relative; */
   display: flex;
   flex-direction: column;
 
@@ -38,6 +42,7 @@ export const InputBrand = styled.input`
   border: 1px solid rgba(247, 247, 251, 1);
 `;
 export const InputPrice = styled.input`
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -97,11 +102,12 @@ export const Button = styled.button`
 
 export const DropdownList = styled.ul`
   position: absolute;
+  left: 162px;
   z-index: 10;
   border: 1px solid #ccc;
   max-height: 150px;
   overflow-y: scroll;
-  width: 200px;
+  width: 224px;
   background-color: #fff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 235px;
@@ -115,6 +121,7 @@ export const DropdownList = styled.ul`
 
 export const DropdownPriceList = styled.ul`
   position: absolute;
+  left: 150px;
   z-index: 10;
   border: 1px solid #ccc;
   max-height: 150px;
@@ -132,15 +139,16 @@ export const DropdownPriceList = styled.ul`
   color: rgba(18, 20, 23, 0.2);
 `;
 
-export const ChevronDown = styled.svg`
+export const ChevronDown = styled(DownChevron)`
   position: absolute;
-  top: 11px;
-  left: 16px;
+  top: 110px;
+  left: 160px;
   width: 20px;
   height: 20px;
+  /* &::svg: */
 `;
 
-export const ChevronUp = styled.svg`
+export const ChevronUp = styled(UpChevron)`
   position: absolute;
   top: 11px;
   right: 16px;

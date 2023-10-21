@@ -15,8 +15,9 @@ import {
   Price,
   Title,
 } from './ListAuto.styled';
-import normalIcon from '../../images/normal.svg';
-import activeIcon from '../../images/active.svg';
+import normalIcon from '../../icons/normal.svg';
+import activeIcon from '../../icons/active.svg';
+import { parseAddress } from 'component/utils/utils';
 
 const baseURL = 'https://653015866c756603295e3ada.mockapi.io/adverts/';
 
@@ -69,8 +70,8 @@ export const ListAuto = () => {
     fetchCars();
   }, []);
 
-  const openModal = car => {
-    setSelectedCar(car);
+  const openModal = () => {
+    setSelectedCar();
   };
 
   const closeModal = () => {
@@ -116,8 +117,9 @@ export const ListAuto = () => {
                   <Price>{car.rentalPrice}</Price>
                 </Title>
                 <Info>
-                  {car.address} | {car.rentalCompany} | {car.type} |
-                  {car.mileage} m | {car.accessories[2]}
+                  {parseAddress(car.address).city} |{' '}
+                  {parseAddress(car.address).country} | {car.rentalCompany} |{' '}
+                  {car.type} | {car.mileage / 1000} | {car.accessories[2]}
                 </Info>
                 <Button>Learn more</Button>
               </Item>

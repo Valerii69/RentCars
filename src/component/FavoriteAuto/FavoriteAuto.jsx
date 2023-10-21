@@ -1,19 +1,9 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { CarDetails } from '../CarDetails/CarDetails';
-import {
-  Button,
-  Collection,
-  Decor,
-  IconContainer,
-  Img,
-  Info,
-  Item,
-  Name,
-  Price,
-  Title,
-} from '../ListAuto/ListAuto.styled';
-import activeIcon from '../../images/active.svg';
+import { parseAddress } from 'component/utils/utils';
+import * as s from '../ListAuto/ListAuto.styled';
+import activeIcon from '../../icons/active.svg';
 import { useFavorites } from '../../hooks/useFavorites';
 
 const baseURL = 'https://648ca3ae8620b8bae7ed2c50.mockapi.io/adverts';
@@ -51,42 +41,43 @@ export const FavoriteAuto = () => {
 
   return (
     <>
-      <Collection>
+      <s.Collection>
         <ul>
           {favoriteCars.map(car => {
             return (
-              <Item
+              <s.Item
                 key={car.id}
                 onClick={() => {
                   openModal(car);
                 }}
               >
-                <Img src={car.img} alt="" width="274" height="268" />
-                <IconContainer
+                <s.Img src={car.img} alt="" width="274" height="268" />
+                <s.IconContainer
                   onClick={e => {
                     e.stopPropagation();
                     removeFavorite(car.id);
                   }}
                 >
                   <img src={activeIcon} alt="icon" />
-                </IconContainer>
-                <Title>
-                  <Name>
-                    {car.make} <Decor>{car.model}</Decor>, {car.year}
-                  </Name>
-                  <Price>{car.rentalPrice}</Price>
-                </Title>
-                <Info>
-                  {car.address} | {car.rentalCompany} | {car.type} |
-                  {car.mileage} m |{car.accessories[2]}
-                </Info>
-                <Button>Learn more</Button>
-              </Item>
+                </s.IconContainer>
+                <s.Title>
+                  <s.Name>
+                    {car.make} <s.Decor>{car.model}</s.Decor>, {car.year}
+                  </s.Name>
+                  <s.Price>{car.rentalPrice}</s.Price>
+                </s.Title>
+                <s.Info>
+                  {parseAddress(car.address).city} |{' '}
+                  {parseAddress(car.address).country} | {car.rentalCompany} |{' '}
+                  {car.type} | {car.mileage / 1000} | {car.accessories[2]}
+                </s.Info>
+                <s.Button>Learn more</s.Button>
+              </s.Item>
             );
           })}
         </ul>
         {selectedCar && <CarDetails car={selectedCar} onClose={closeModal} />}
-      </Collection>
+      </s.Collection>
     </>
   );
 };

@@ -1,16 +1,28 @@
 import { Outlet } from 'react-router-dom';
-import { Header, Box, LogoHeader } from './AppBar.styled';
-import { Navigation } from '../Navigation/Navigation';
+import { Suspense } from 'react';
+// import { Box } from './AppBar.styled';
+import { Header } from 'component/Header/Header';
+// import { Navigation } from '../Navigation/Navigation';
+import Sidebar from 'component/Sidebar/Sidebar';
+import { useState } from 'react';
+import { Box } from './AppBar.styled';
 
 export const AppBar = () => {
+  const [showSideBar, setShowSideBar] = useState();
+
+  const onSideBar = () => {
+    setShowSideBar(prevState => !prevState);
+  };
+
   return (
     <Box>
-      <Header>
-        <LogoHeader />
-        <Navigation />
-      </Header>
-
-      <Outlet />
+      {showSideBar && <Sidebar onSideBar={onSideBar} />}
+      <Header onSideBar={onSideBar} />
+      <main>
+        <Suspense>
+          <Outlet />
+        </Suspense>
+      </main>
     </Box>
   );
 };

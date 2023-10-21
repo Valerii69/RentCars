@@ -13,6 +13,7 @@ export const Box = styled.div`
   display: flex;
   flex-direction: column;
   max-width: 1440px;
+  position: relative;
 `;
 
 export const Header = styled.header`

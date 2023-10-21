@@ -7,15 +7,14 @@ export const Box = styled.div`
   margin-top: 15px;
   margin-bottom: 30px;
   justify-content: center;
-  /* padding: 30px; */
 `;
 
 export const Title = styled.h1`
   font-weight: 600;
   font-size: 80px;
   line-height: 1.33;
-  /* padding: 30px 100px; */
-  color: #ffff;
+
+  color: ${({ theme }) => theme.colors.white};
   margin-bottom: 30px;
   word-spacing: 3px;
 `;
@@ -25,14 +24,14 @@ export const Description = styled.p`
   display: inline-block;
   font-size: 26px;
   line-height: 1.33;
-  color: #ffff;
-  /* padding: 30px 100px; */
+  color: ${({ theme }) => theme.colors.white};
+
   margin-bottom: 30px;
   word-spacing: 3px;
 `;
 
 export const Span = styled.span`
-  color: #f4b10a;
+  color: ${({ theme }) => theme.colors.colorCar};
   font-size: 30px;
   line-height: 1.33;
 `;

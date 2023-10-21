@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import Catalog from './pages/Catalog';
 import Home from './pages/Home';
 
-// import Favorite from './pages/Favorite';
+import Favorite from './pages/Favorite';
 import { AppBar } from './component/AppBar/AppBar';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <Route path="/" element={<AppBar />}>
           <Route index element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
-          {/* <Route path="/favorites" element={<Favorite />} /> */}
+          <Route path="/favorites" element={<Favorite />} />
         </Route>
       </Routes>
     </>
