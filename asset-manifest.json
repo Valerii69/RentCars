@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/RentCars/static/css/main.cd2e038f.css",
-    "main.js": "/RentCars/static/js/main.a33f7564.js",
+    "main.js": "/RentCars/static/js/main.2efc23f3.js",
     "static/js/627.d30b7af0.chunk.js": "/RentCars/static/js/627.d30b7af0.chunk.js",
     "static/js/875.bd0017aa.chunk.js": "/RentCars/static/js/875.bd0017aa.chunk.js",
     "static/js/903.09e6c9e0.chunk.js": "/RentCars/static/js/903.09e6c9e0.chunk.js",
@@ -17,7 +17,7 @@
     "static/media/x-close.svg": "/RentCars/static/media/x-close.b8c2a2a37d22c5916eba425ea5b71782.svg",
     "static/media/chevron-up.svg": "/RentCars/static/media/chevron-up.be7ae35622f5d7407b5b74864c41357c.svg",
     "main.cd2e038f.css.map": "/RentCars/static/css/main.cd2e038f.css.map",
-    "main.a33f7564.js.map": "/RentCars/static/js/main.a33f7564.js.map",
+    "main.2efc23f3.js.map": "/RentCars/static/js/main.2efc23f3.js.map",
     "627.d30b7af0.chunk.js.map": "/RentCars/static/js/627.d30b7af0.chunk.js.map",
     "875.bd0017aa.chunk.js.map": "/RentCars/static/js/875.bd0017aa.chunk.js.map",
     "903.09e6c9e0.chunk.js.map": "/RentCars/static/js/903.09e6c9e0.chunk.js.map",
@@ -26,6 +26,6 @@
   },
   "entrypoints": [
     "static/css/main.cd2e038f.css",
-    "static/js/main.a33f7564.js"
+    "static/js/main.2efc23f3.js"
   ]
 }
