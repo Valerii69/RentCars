@@ -37,7 +37,7 @@ const Favorite = () => {
     <>
       <Filter />
       <Section>
-        {isLoading && Loading.arrows()}
+        {isLoading && Loading.pulse()}
         {!favorites.length && (
           <Message text="You don't have any favorite cars yet!" />
         )}

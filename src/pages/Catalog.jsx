@@ -31,7 +31,7 @@ const Catalog = () => {
     <>
       <Section>
         <Filter />
-        {isLoading && Loading.arrows()}
+        {isLoading && Loading.pulse()}
         {itemsPerPage > 0 && <ListCatalog data={cars} />}
       </Section>
     </>

@@ -1,27 +1,30 @@
+import { useState } from 'react';
 import { ListCatalogItems } from '../ListCatalogItem/ListCatalogItem';
 import * as s from './ListCatalog.styled';
 
 export const ListCatalog = ({ data }) => {
-  //   const startIndex = (currentPage - 1) * itemsPerPage;
-  //   const endIndex = startIndex + itemsPerPage;
-  //   const itemsToShow = cars.slice(0, endIndex);
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const itemsToShow = data.slice(0, endIndex);
 
-  //   const loadMore = () => {
-  //     setCurrentPage(prevPage => prevPage + 1);
-  //   };
+  const loadMore = () => {
+    setCurrentPage(prevPage => prevPage + 1);
+  };
 
   return (
     <>
       <s.List>
-        {data.map(car => (
+        {itemsToShow.map(car => (
           <s.ListItems key={car.id}>
             <ListCatalogItems car={car} />
           </s.ListItems>
         ))}
       </s.List>
-      {/* {cars.length > endIndex && (
+      {data.length > endIndex && (
         <s.LoadMore onClick={loadMore}>Load more</s.LoadMore>
-      )} */}
+      )}
     </>
   );
 };

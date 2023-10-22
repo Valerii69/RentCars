@@ -17,6 +17,7 @@ body {
   font-style: normal;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -65,7 +66,7 @@ li {
   src: url('../src/assets/fonts/Manrope-Bold.ttf');
   font-style: normal;
   font-weight: 700;
- 
+
 }
 
 @font-face {
