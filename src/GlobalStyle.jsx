@@ -56,7 +56,18 @@ li {
   src: url('../src/assets/fonts/Manrope-SemiBold.ttf');
   font-weight: 600;
   font-style: normal;
+
 }
+
+@font-face {
+  font-display: swap;
+  font-family: 'Manrope';
+  src: url('../src/assets/fonts/Manrope-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+ 
+}
+
 
 @font-face {
   font-family: 'Montserrat';
