@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { ReactComponent as CloseIconBtn } from '../../icons/x-close.svg';
-import { globalStyled } from 'stylesheet/styled';
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -13,7 +12,7 @@ export const Backdrop = styled.div`
   justify-content: center;
   align-items: center;
 
-  background-color: ${globalStyled.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.secondary};
 `;
 
 export const ModalField = styled.div`
@@ -24,7 +23,7 @@ export const ModalField = styled.div`
 
   border-radius: 24px;
 
-  background-color: ${globalStyled.colors.white};
+  background-color: ${({ theme }) => theme.colors.white};
 `;
 
 export const CloseButton = styled.button`
@@ -48,5 +47,5 @@ export const IconBtn = styled(CloseIconBtn)`
   width: 100%;
   height: 100%;
 
-  color: ${globalStyled.colors.primary};
+  color: ${({ theme }) => theme.colors.primary};
 `;

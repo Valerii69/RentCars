@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import { globalStyled } from 'stylesheet/styled';
 
 export const Container = styled.div`
   /* padding-left: 128px;

@@ -7,13 +7,6 @@ export const Collection = styled.div`
   max-width: 100%;
 
   margin-bottom: 100px;
-  /* padding-left: 8px;
-  padding-right: 8px;
-  display: flex;
-  width: 1184px;
-  height: 426px;
-  /* align-items: flex-start; */
-  /* gap: 29px; */
   column-gap: 50px;
   flex-shrink: 0;
 `;
