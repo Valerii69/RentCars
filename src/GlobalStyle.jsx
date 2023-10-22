@@ -68,7 +68,6 @@ li {
  
 }
 
-
 @font-face {
   font-family: 'Montserrat';
   src: url('../src/assets/fonts/Montserrat-Regular.ttf');
