@@ -29,7 +29,7 @@ const Catalog = () => {
 
   return (
     <>
-      <Section title="Catalog page">
+      <Section>
         <Filter />
         {isLoading && Loading.arrows()}
         {itemsPerPage > 0 && <ListCatalog data={cars} />}
