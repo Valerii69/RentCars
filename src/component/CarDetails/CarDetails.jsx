@@ -46,13 +46,13 @@ export const CarDetails = ({
           {accessories[0]} | {accessories[1]} | {accessories[2]}
         </div>
         <div>
-          {functionalities[0]} | {functionalities[1]} |{functionalities[2]}
+          {functionalities[0]} | {functionalities[1]} | {functionalities[2]}
         </div>
       </s.Info>
       <s.Chapter>Rental Conditions:</s.Chapter>
       <s.Conditions>
         <s.Box>
-          Minimum age :<s.Accent>{rentalConditions[0]}</s.Accent>
+          Minimum age : <s.Accent>{rentalConditions[0]}</s.Accent>
         </s.Box>
         <s.Box>{rentalConditions[1]}</s.Box>
       </s.Conditions>

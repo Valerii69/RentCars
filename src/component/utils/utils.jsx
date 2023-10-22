@@ -15,3 +15,8 @@ export const getLocationData = (address, car) => {
   const { rentalCompany } = car;
   return [city, country, rentalCompany];
 };
+export const parseConditions = rentalConditions => {
+  const arr = rentalConditions.split('\n');
+  const age = arr[arr.length - 1];
+  return { arr, age };
+};

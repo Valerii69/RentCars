@@ -42,6 +42,7 @@ export const Info = styled.div`
   line-height: 1.5;
   word-spacing: 3px;
   margin-bottom: 14px;
+  color: ${({ theme }) => theme.colors.secondary};
 `;
 
 export const Description = styled.p`
@@ -73,9 +74,17 @@ export const Conditions = styled.div`
   padding-left: 14px;
 `;
 
-export const Box = styled.span`
-  margin-right: 20px;
+export const Box = styled.div`
+  margin-right: 8px;
   margin-bottom: 8px;
+  background-color: ${({ theme }) => theme.colors.bgAdditionalModal};
+  display: flex;
+  border-radius: 35px;
+  padding: 7px 14px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border: none;
 `;
 
 export const Accent = styled.span`
