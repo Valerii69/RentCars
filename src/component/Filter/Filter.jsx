@@ -106,8 +106,7 @@ export const Filter = () => {
       <Form>
         <label>
           <Text>Car brand</Text>
-          <LabelBox>
-            {' '}
+          <LabelBox>{' '}
             <InputBrand
               placeholder="Enter the text"
               type="text"
