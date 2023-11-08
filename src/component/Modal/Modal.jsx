@@ -13,7 +13,7 @@ const Modal = ({ closeModal, children }) => {
   });
 
   const handleKeyDown = e => {
-    if (e.code === 'Escape') {
+    if (e.currentTarget === e.target) {
       closeModal();
     }
   };
