@@ -1,6 +1,10 @@
 import styled from 'styled-components';
+<<<<<<< HEAD
 // import { theme } from 'stylesheet/styled';
 import noImageIcon from '../../images/auto_not_available.png';
+=======
+import noImageAuto from '../../images/noImageAuto.png';
+>>>>>>> 725a5be374ee80533059298915eb2fa141e35bb1
 
 export const Details = styled.div`
   height: 100%;
@@ -15,7 +19,11 @@ export const Thumb = styled.div`
   height: 248px;
   border-radius: 14px;
   margin-bottom: 14px;
+<<<<<<< HEAD
   background-image: url(${noImageIcon});
+=======
+  background-image: url(${noImageAuto});
+>>>>>>> 725a5be374ee80533059298915eb2fa141e35bb1
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -108,8 +116,12 @@ export const Button = styled.button`
   font-size: 14px;
   line-height: 1.43;
   background-color: ${({ theme }) => theme.colors.accent};
+<<<<<<< HEAD
   transition: background-color 250ms
     ${({ theme }) => theme.timingFunction.cubicBezier};
+=======
+  transition: background-color 250ms ${({ theme }) => theme.timingFunction.cubicBezier};
+>>>>>>> 725a5be374ee80533059298915eb2fa141e35bb1
 
   &:hover,
   &:focus {
@@ -125,6 +137,7 @@ export const LinkToContact = styled.a`
   color: ${({ theme }) => theme.colors.white};
   word-spacing: 3px;
   text-decoration: none;
+<<<<<<< HEAD
 `;
 export const Message = styled.h2`
   font-size: 32px;
@@ -132,3 +145,6 @@ export const Message = styled.h2`
   padding: 20px 0;
   text-align: center;
 `;
+=======
+`;
+>>>>>>> 725a5be374ee80533059298915eb2fa141e35bb1
