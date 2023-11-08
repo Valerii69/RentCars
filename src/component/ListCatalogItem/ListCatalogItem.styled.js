@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import noImageIcon from '../../images/auto_not_available.png';
 
 export const Card = styled.div`
   height: 100%;
@@ -12,6 +13,11 @@ export const Thumb = styled.div`
   width: 274px;
   height: 254px;
   margin-bottom: 14px;
+  border-radius: 14px;
+  background-image: url(${noImageIcon});
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 `;
 
 export const IconContainer = styled.div`

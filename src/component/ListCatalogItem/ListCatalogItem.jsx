@@ -6,7 +6,7 @@ import { CarDetails } from 'component/CarDetails/CarDetails';
 import { ReactComponent as IconNoFavorite } from '../../icons/heart-normal.svg';
 import { ReactComponent as IconFavorite } from '../../icons/heart-active.svg';
 import { useFavorites } from 'hooks/useFavorites';
-import { parseAddress } from 'component/utils/utils';
+import { parseAddress } from '../utils/utils';
 
 export const ListCatalogItems = ({ car }) => {
   const [isShowModal, setIsShowModal] = useState(false);
@@ -40,8 +40,7 @@ export const ListCatalogItems = ({ car }) => {
         <s.Price>{car.rentalPrice}</s.Price>
       </s.Title>
       <s.Info>
-        {parseAddress(car.address).city} | {parseAddress(car.address).country} |
-        {car.rentalCompany} | {car.type} | {car.mileage / 1000} |{' '}
+        {parseAddress(car.address).city} | {parseAddress(car.address).country} | {car.rentalCompany} | {car.type} | {car.mileage / 1000} | {' '}
         {car.accessories[2]}
       </s.Info>
       <s.ButtonLearnMore onClick={showModal}>Learn more</s.ButtonLearnMore>

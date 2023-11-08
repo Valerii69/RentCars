@@ -4,7 +4,9 @@ import 'modern-normalize/modern-normalize.css';
 export const GlobalStyle = createGlobalStyle`
 body {
   margin: 0;
-
+  font-family: 'Manrope' -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   background-color: var(--accent-color-bg-color);
   color: var(--accent-color-text-color);
 
@@ -37,50 +39,60 @@ li {
   --accent-color-text-color: #ffffff;
 }
 
-@font-face {
-  font-family: 'Manrope';
-  src: url('../src/assets/fonts/Manrope-Regular.ttf');
-  font-weight: 400;
-  font-style: normal;
-}
+/* --------- Fonts ------------------------------------- */
 
-@font-face {
-  font-family: 'Manrope';
-
-  src: url('../src/assets/fonts/Manrope-Medium.ttf');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Manrope';
-  src: url('../src/assets/fonts/Manrope-SemiBold.ttf');
-  font-weight: 600;
-  font-style: normal;
-
-}
-
+/* Manrope-Regular 400 */
 @font-face {
   font-display: swap;
   font-family: 'Manrope';
-  src: url('../src/assets/fonts/Manrope-Bold.ttf');
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/Manrope-Regular.ttf') format('ttf');
+}
+
+/* Manrope-Medium 500 */
+@font-face {
+  font-display: swap;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/Manrope-Medium.ttf') format('ttf');
+}
+
+/* Manrope-SemiBold 600 */
+@font-face {
+  font-display: swap;
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/Manrope-SemiBold.ttf') format('ttf');
+}
+
+/* Manrope-Bold 700 */
+@font-face {
+  font-display: swap;
+  font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
-
+  src: url('./assets/fonts/Manrope-Bold.ttf') format('ttf');
 }
 
+/* Montserrat-Regular 400 */
 @font-face {
+  font-display: swap;
   font-family: 'Montserrat';
-  src: url('../src/assets/fonts/Montserrat-Regular.ttf');
+  font-style: normal;
   font-weight: 400;
-  font-style: normal;
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('ttf');
 }
 
+/* Montserrat-SemiBold 600 */
 @font-face {
+  font-display: swap;
   font-family: 'Montserrat';
-  src: url('../src/assets/fonts/Montserrat-SemiBold.ttf');
-  font-weight: 500;
   font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/Montserrat-SemiBold.ttf') format('ttf');
 }
 
 * {

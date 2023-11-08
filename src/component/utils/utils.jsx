@@ -20,6 +20,6 @@ export const parseConditions = rentalConditions => {
   const arr = rentalConditions.split('\n');
   const ageString = arr.find(item => item.includes('Minimum age'));
   const ageValue = parseInt(ageString.split(':')[1]);
-  const age = `${ageValue}`;
+  const age = ` ${ageValue}`;
   return { arr, age };
 };

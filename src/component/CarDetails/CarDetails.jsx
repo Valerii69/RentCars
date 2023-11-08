@@ -20,6 +20,7 @@ export const CarDetails = ({
     address,
     rentalConditions,
     mileage,
+    
   },
 }) => {
   return (
