@@ -1,5 +1,5 @@
 import { Filter } from '../component/Filter/Filter';
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useRef } from 'react';
 import { clearSelect } from 'helpers/clearSelect';
 import { getCarCatalog } from 'api/adverts';
 import { Section } from 'component/Section/Section';
@@ -20,6 +20,8 @@ const Catalog = () => {
   const [mileageFrom, setMileageFrom] = useState('');
   const [mileageTo, setMileageTo] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const selectInputBrandRefCatalog = useRef(null);
+  const selectInputPriceRefCatalog = useRef(null);
 
   useEffect(() => {
     setIsLoading(true);
@@ -106,7 +108,7 @@ const Catalog = () => {
     setInputPrice('');
     setMileageFrom('');
     setMileageTo('');
-    clearSelect();
+    clearSelect(selectInputBrandRefCatalog, selectInputPriceRefCatalog);
     setFilterCatalog(dataCatalog);
   };
 
@@ -122,6 +124,8 @@ const Catalog = () => {
           resetFilters={resetFilters}
           mileageFrom={mileageFrom}
           mileageTo={mileageTo}
+          selectInputBrandRef={selectInputBrandRefCatalog}
+          selectInputPriceRef={selectInputPriceRefCatalog}
         />
         {!filterCatalog.length && (
           <Message text="Sorry, there are no machines with such parameters!" />

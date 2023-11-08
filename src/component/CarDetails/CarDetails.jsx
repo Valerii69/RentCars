@@ -54,7 +54,8 @@ export const CarDetails = ({
       <s.Chapter>Rental Conditions:</s.Chapter>
       <s.Conditions>
         <s.Box>
-          Minimum age:{' '}
+          Minimum age:
+          {/* {' '} */}
           <s.Accent>{parseConditions(rentalConditions).age}</s.Accent>
         </s.Box>
         <s.Box>{parseConditions(rentalConditions).arr[1]}</s.Box>
