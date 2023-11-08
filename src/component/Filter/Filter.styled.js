@@ -1,77 +1,78 @@
 import styled from 'styled-components';
-import { ReactComponent as DownChevron } from '../../icons/chevron-down.svg';
-import { ReactComponent as UpChevron } from '../../icons/chevron-up.svg';
+import { ReactComponent as IconSearch } from '../../icons/dandruff.svg';
 
 export const Form = styled.form`
   display: flex;
-  /* width: 162px; */
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 40px 0px;
+  width: 100%;
+  justify-content: center;
+  gap: 18px;
+  padding-top: 40px;
+  align-items: flex-end;
+  margin-bottom: 50px;
 `;
 
-export const LabelBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
+export const LabelBoxMake = styled.div`
+  border-radius: 14px;
 `;
 
 export const Text = styled.span`
   font-weight: 500;
   font-size: 14px;
   line-height: 1.29;
-  font-family: Manrope;
-  color: rgba(138, 138, 137, 1);
+  color: ${({ theme }) => theme.colors.placeholder};
 `;
 
-export const InputBrand = styled.input`
-  /* position: relative; */
-  display: flex;
-  flex-direction: column;
-
+export const Select = styled.select`
+  width: 100%;
+  padding: 14px 18px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.11;
-  font-family: Manrope;
-  color: rgba(18, 20, 23, 1);
+  color: ${({ theme }) => theme.colors.primary};
 
-  height: 48px;
-  width: 224px;
+  outline: 0;
+  cursor: pointer;
   border-radius: 14px;
-  border: 1px solid rgba(247, 247, 251, 1);
+  border: 1px solid ${({ theme }) => theme.colors.bgInput};
 `;
-export const InputPrice = styled.input`
-  position: relative;
-  display: flex;
-  flex-direction: column;
 
+export const DropdownList = styled.option`
+  width: 100%;
+  flex-basis: 272px;
+  overflow-y: scroll;
+
+  background-color: ${({ theme }) => theme.colors.white};
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.11;
-  font-family: Manrope;
-  color: rgba(18, 20, 23, 1);
+  font-size: 16px;
+  line-height: 1.25;
+  color: ${({ theme }) => theme.colors.dropdown};
+`;
 
-  height: 48px;
+export const LabelBoxPrice = styled.div`
   width: 125px;
-  border-radius: 14px;
-  border: 1px solid rgba(247, 247, 251, 1);
+`;
+
+export const LabelBox = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const LabelBoxMileage = styled.div`
+  display: flex;
+  margin-top: 8px;
 `;
 
 export const InputMilea = styled.input`
-  display: flex;
-  flex-direction: column;
-
   font-weight: 500;
   font-size: 18px;
   line-height: 1.11;
-  font-family: Manrope;
-  color: rgba(18, 20, 23, 1);
+  color: ${({ theme }) => theme.colors.primary};
 
   height: 48px;
   width: 160px;
+  padding: 14px 24px;
   border-radius: 14px;
-  border: 1px solid rgba(247, 247, 251, 1);
+  border: 1px solid ${({ theme }) => theme.colors.bgInput};
 `;
 
 export const Button = styled.button`
@@ -80,78 +81,31 @@ export const Button = styled.button`
   align-items: center;
 
   width: 136px;
-  height: 48px;
-  top: 20px;
-  left: 20px;
+  height: 44px;
   border-radius: 12px;
   border: none;
-  color: rgba(255, 255, 255, 1);
+  color: ${({ theme }) => theme.colors.white};
   font-weight: 600;
   font-size: 14px;
   line-height: 1.43;
-  background-color: rgba(52, 112, 255, 1);
-  padding: 14px, 44px, 14px, 44px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: ${({ theme }) => theme.colors.accent};
+
+  transition: background-color 250ms
+    ${({ theme }) => theme.timingFunction.cubicBezier};
 
   &:hover,
   &:focus {
-    background-color: rgba(11, 68, 205, 1);
+    background-color: ${({ theme }) => theme.colors.accentHover};
     cursor: pointer;
   }
 `;
 
-export const DropdownList = styled.ul`
-  position: absolute;
-  left: 162px;
-  z-index: 10;
-  border: 1px solid #ccc;
-  max-height: 150px;
-  overflow-y: scroll;
-  width: 224px;
-  background-color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 235px;
-  list-style-type: none;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.25;
-  font-family: Manrope;
-  color: rgba(18, 20, 23, 0.2);
-`;
-
-export const DropdownPriceList = styled.ul`
-  position: absolute;
-  left: 150px;
-  z-index: 10;
-  border: 1px solid #ccc;
-  max-height: 150px;
-  overflow-y: scroll;
-  width: 100px;
-  background-color: #fff;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  margin-top: 235px;
-  margin-left: 300px;
-  list-style-type: none;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.25;
-  font-family: Manrope;
-  color: rgba(18, 20, 23, 0.2);
-`;
-
-export const ChevronDown = styled(DownChevron)`
-  position: absolute;
-  top: 110px;
-  left: 160px;
-  width: 20px;
-  height: 20px;
-  /* &::svg: */
-`;
-
-export const ChevronUp = styled(UpChevron)`
-  position: absolute;
-  top: 11px;
-  right: 16px;
-  width: 20px;
-  height: 20px;
+export const IconSearchBtn = styled(IconSearch)`
+  width: 25px;
+  height: 25px;
+  border: none;
+  margin-right: 4px;
+  padding: 0;
+  cursor: pointer;
+  fill: ${({ theme }) => theme.colors.white};
 `;

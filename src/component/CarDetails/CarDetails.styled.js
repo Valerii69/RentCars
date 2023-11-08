@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+// import { theme } from 'stylesheet/styled';
+import noImageIcon from '../../images/auto_not_available.png';
 
 export const Details = styled.div`
   height: 100%;
@@ -11,7 +13,12 @@ export const Details = styled.div`
 export const Thumb = styled.div`
   width: 461px;
   height: 248px;
+  border-radius: 14px;
   margin-bottom: 14px;
+  background-image: url(${noImageIcon});
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 export const Img = styled.img`
@@ -42,7 +49,6 @@ export const Info = styled.div`
   line-height: 1.5;
   word-spacing: 3px;
   margin-bottom: 14px;
-  color: ${({ theme }) => theme.colors.secondary};
 `;
 
 export const Description = styled.p`
@@ -74,17 +80,9 @@ export const Conditions = styled.div`
   padding-left: 14px;
 `;
 
-export const Box = styled.div`
-  margin-right: 8px;
+export const Box = styled.span`
+  margin-right: 20px;
   margin-bottom: 8px;
-  background-color: ${({ theme }) => theme.colors.bgAdditionalModal};
-  display: flex;
-  border-radius: 35px;
-  padding: 7px 14px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  border: none;
 `;
 
 export const Accent = styled.span`
@@ -103,8 +101,6 @@ export const Button = styled.button`
 
   width: 168px;
   height: 44px;
-  top: 20px;
-  left: 20px;
   border-radius: 12px;
   border: none;
   color: ${({ theme }) => theme.colors.white};
@@ -112,7 +108,6 @@ export const Button = styled.button`
   font-size: 14px;
   line-height: 1.43;
   background-color: ${({ theme }) => theme.colors.accent};
-  padding: 12px, 99px, 12px, 99px;
   transition: background-color 250ms
     ${({ theme }) => theme.timingFunction.cubicBezier};
 
@@ -130,4 +125,10 @@ export const LinkToContact = styled.a`
   color: ${({ theme }) => theme.colors.white};
   word-spacing: 3px;
   text-decoration: none;
+`;
+export const Message = styled.h2`
+  font-size: 32px;
+  font-weight: 600;
+  padding: 20px 0;
+  text-align: center;
 `;

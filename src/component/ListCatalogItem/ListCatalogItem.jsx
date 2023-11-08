@@ -40,7 +40,7 @@ export const ListCatalogItems = ({ car }) => {
         <s.Price>{car.rentalPrice}</s.Price>
       </s.Title>
       <s.Info>
-        {parseAddress(car.address).city} | {parseAddress(car.address).country} |{' '}
+        {parseAddress(car.address).city} | {parseAddress(car.address).country} |
         {car.rentalCompany} | {car.type} | {car.mileage / 1000} |{' '}
         {car.accessories[2]}
       </s.Info>

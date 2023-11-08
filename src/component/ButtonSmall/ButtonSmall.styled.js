@@ -11,7 +11,7 @@ export const Button = styled.div`
   left: 20px;
   border-radius: 12px;
   border: none;
-  color: rgba(255, 255, 255, 1);
+  color: ${({ theme }) => theme.colors.white};
   font-weight: 600;
   font-size: 14px;
   line-height: 1.43;
@@ -23,9 +23,9 @@ export const Button = styled.div`
   &:hover,
   &:focus {
     background-color: rgba(11, 68, 205, 1);
-    -webkit-box-shadow: 5px 5px 7px 1px rgba(255, 255, 255, 1);
-    -moz-box-shadow: 5px 5px 7px 1px rgba(255, 255, 255, 1);
-    box-shadow: 5px 5px 7px 1px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 5px 5px 7px 1px ${({ theme }) => theme.colors.white};
+    -moz-box-shadow: 5px 5px 7px 1px ${({ theme }) => theme.colors.white};
+    box-shadow: 5px 5px 7px 1px ${({ theme }) => theme.colors.white};
     cursor: pointer;
   }
 `;
