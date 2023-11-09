@@ -22,5 +22,5 @@ export const parseConditions = rentalConditions => {
   const ageValue = parseInt(ageString.split(':')[1]);
   const age = ` ${ageValue}`;
   return { arr, age };
- 
-}; 
+
+};
