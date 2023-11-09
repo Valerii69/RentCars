@@ -1,5 +1,5 @@
 import { Filter } from '../component/Filter/Filter';
-import { useState, useEffect,useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { clearSelect } from 'helpers/clearSelect';
 import { getCarCatalog } from 'api/adverts';
 import { Section } from 'component/Section/Section';

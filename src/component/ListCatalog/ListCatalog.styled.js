@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const List = styled.ul`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   padding: 0px;

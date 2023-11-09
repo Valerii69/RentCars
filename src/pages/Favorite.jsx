@@ -1,4 +1,4 @@
-import { useState, useEffect,useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { getCarByIdCatalog } from 'api/adverts';
 import { Section } from 'component/Section/Section';
 import { ListCatalog } from 'component/ListCatalog/ListCatalog';
