@@ -4,7 +4,7 @@ import * as s from './ListCatalog.styled';
 
 export const ListCatalog = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
+  const itemsPerPage = 8;
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = startIndex + itemsPerPage;
   const itemsToShow = data.slice(0, endIndex);
