@@ -4,14 +4,17 @@ import { ReactComponent as BurgerMenuIcon } from '../../icons/burger-menu.svg';
 import logo from '../../images/logo.png';
 import { Link } from 'react-router-dom';
 
- const Header = ({ onSideBar }) => {
+const Header = ({ Modal }) => {
   return (
     <s.Container>
       <s.DivBtn>
         <s.BurgerBtn
           type="button"
+          // onClick={() => {
+          //   onSideBar();
+          // }}
           onClick={() => {
-            onSideBar();
+            Modal(); // Викликаємо функцію відкриття модального вікна
           }}
         >
           <BurgerMenuIcon />
@@ -21,9 +24,10 @@ import { Link } from 'react-router-dom';
           <Link to="/">
             <s.HeaderP>RentCars</s.HeaderP>
           </Link>
-        </s.DivImg>{' '}
+        </s.DivImg>
       </s.DivBtn>
-    </s.Container>
+       </s.Container>
   );
 };
+
 export default memo(Header);

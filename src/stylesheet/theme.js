@@ -2,7 +2,8 @@
 const theme = {
   colors: {
     primary: '#121417',
-    secondary: '#12141780', //rgba(18, 20, 23, 0.50);
+    secondary: '#121417', //rgba(18, 20, 23, 0.50);
+    accentBgColor: '#f0f0f0',
     white: '#ffffff', //rgba(255, 255, 255, 1);
     accent: '#3470FF', //rgba(52, 112, 255, 1);
     accentHover: '#4a90e2 ', //rgba(11, 68, 205, 1);
@@ -16,7 +17,7 @@ const theme = {
     bgHero: 'rgba(205 218 239)',
     colorHero: '#1e73a3',
     colorCar: '#e67e22',
-    colorCarAccent:'#e36d05',
+    colorCarAccent: '#e36d05',
     borderPriseList: '#12147b0d',
   },
 

@@ -1,51 +1,36 @@
-import React, { useEffect, useRef,memo } from 'react';
+import React, { useEffect, useRef, memo } from 'react';
 import * as s from './Sidebar.styled';
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = ({ toggleModal }) => {
   const sidebarRef = useRef(null);
 
   useEffect(() => {
     const currentRef = sidebarRef.current;
 
-    const handleSidebarClick = e => {
-      e.stopPropagation();
+      if (currentRef && !currentRef.contains) {
+        toggleModal(); // Закрити модальне вікно при кліку поза Sidebar
     };
 
-    const handleDocumentClick = e => {
-      if (isOpen && currentRef && !currentRef.contains(e.target)) {
-        toggleSidebar(false);
-      }
-    };
+  }, [toggleModal]);
 
-    if (currentRef) {
-      currentRef.addEventListener('click', handleSidebarClick);
-      document.addEventListener('click', handleDocumentClick);
-    }
-
-    return () => {
-      if (currentRef) {
-        currentRef.removeEventListener('click', handleSidebarClick);
-        document.removeEventListener('click', handleDocumentClick);
-      }
-    };
-  }, [isOpen, toggleSidebar, sidebarRef]);
+  const handleItemClick = () => {
+    toggleModal(); // Закрити модальне вікно при кліку на елемент `li`
+  };
 
   return (
-    <s.DivSidebar ref={sidebarRef}>
-      <s.Sidebar>
-        <s.List>
-          <li>
-            <s.StyledLink to="/">Home</s.StyledLink>
-          </li>
-          <li>
-            <s.StyledLink to="/catalog">Catalog</s.StyledLink>
-          </li>
-          <li>
-            <s.StyledLink to="/favorites">Favorites</s.StyledLink>
-          </li>
-        </s.List>
-      </s.Sidebar>
-    </s.DivSidebar>
+    <s.Sidebar ref={sidebarRef}> {/* Додаємо ref */}
+      <s.List>
+        <li onClick={handleItemClick}>
+          <s.StyledLink to="/">Home</s.StyledLink>
+        </li>
+        <li onClick={handleItemClick}>
+          <s.StyledLink to="/catalog">Catalog</s.StyledLink>
+        </li>
+        <li onClick={handleItemClick}>
+          <s.StyledLink to="/favorites">Favorites</s.StyledLink>
+        </li>
+      </s.List>
+    </s.Sidebar>
   );
 };
 

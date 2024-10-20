@@ -39,12 +39,14 @@ export const StyledLink = styled(NavLink)`
   align-items: center;
   justify-content: center;
   color: ${({ theme }) => theme.colors.primary};
-
+  background-color: ${({ theme }) => theme.colors.bgAdditionalModal};
+  box-shadow: rgba(0, 0, 0, 0.12) 4px 1px 4px, rgba(0, 0, 0, 0.06) 0px 4px 4px,
+    rgba(0, 0, 0, 0.16) 1px 4px 6px;
   padding: 12px 20px;
   border-radius: 12px;
 
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 800;
   line-height: 1.25;
 
   transition: color 250ms ${({ theme }) => theme.timingFunction.cubicBezier},
@@ -52,13 +54,13 @@ export const StyledLink = styled(NavLink)`
     box-shadow 250ms ${({ theme }) => theme.timingFunction.cubicBezier};
 
   &.active {
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.colorCarAccent};
   }
   &:hover {
-    background-color: ${({ theme }) => theme.colors.bgInput};
-    color: ${({ theme }) => theme.colors.colorCarAccent};
-    box-shadow: rgba(0, 0, 0, 0.12) 4px 1px 4px, rgba(0, 0, 0, 0.06) 0px 4px 4px,
-      rgba(0, 0, 0, 0.16) 1px 4px 6px;
+    background-color: ${({ theme }) => theme.colors.accentHover};
+    color: ${({ theme }) => theme.colors.white};
+    box-shadow: rgba(122, 59, 2, 0.5) 4px 1px 4px,
+      rgba(122, 59, 2, 0.5) 0px 4px 4px, rgba(122, 59, 2, 0.5) 1px 4px 6px;
   }
 `;
 

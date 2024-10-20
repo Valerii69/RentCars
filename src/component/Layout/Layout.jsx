@@ -1,26 +1,38 @@
 import { Outlet } from 'react-router-dom';
-import { Suspense } from 'react';
-import  Header  from 'component/Header/Header';
+import { Suspense, useState } from 'react';
+import Header from 'component/Header/Header';
 import Sidebar from 'component/Sidebar/Sidebar';
-import { useState } from 'react';
+import Modal from 'component/Modal/Modal';
 import { Box } from './Layout.styled';
 
 export const Layout = () => {
-  const [showSideBar, setShowSideBar] = useState();
+  const [showSideBar, setShowSideBar] = useState(false);
+  const [showModal, setShowModal] = useState(false); // Стан для модального вікна
 
   const onSideBar = () => {
     setShowSideBar(prevState => !prevState);
   };
 
+  const toggleModal = () => {
+    console.log('Modal toggled'); // Додайте лог, щоб перевірити чи викликається функція
+    setShowModal(prevState => !prevState); // Перемикання модального вікна
+  };
+
   return (
     <Box>
       {showSideBar && <Sidebar onSideBar={onSideBar} />}
-      <Header onSideBar={onSideBar} />
+      {/* Передаємо toggleModal як пропс Modal */}
+      <Header Modal={toggleModal} />
       <main>
         <Suspense>
           <Outlet />
         </Suspense>
       </main>
+      {showModal && (
+        <Modal closeModal={toggleModal}>
+          <Sidebar onSideBar={onSideBar} toggleModal={toggleModal} />
+        </Modal>
+      )}
     </Box>
   );
 };

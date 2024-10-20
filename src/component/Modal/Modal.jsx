@@ -1,5 +1,6 @@
 import { createPortal } from 'react-dom';
 import { useEffect } from 'react';
+import close_cross_icon from '../../images/close_cross_icon.png';
 import * as s from './Modal.styled';
 
 const ModalRoot = document.getElementById('modal-root');
@@ -13,21 +14,29 @@ const Modal = ({ closeModal, children }) => {
   });
 
   const handleKeyDown = e => {
+    if (e.code === 'Escape') {
+      closeModal();
+    }
+  };
+
+  const handleBackdropClick = e => {
     if (e.currentTarget === e.target) {
       closeModal();
     }
   };
 
-  const handleBackdropClick = evt => {
-    if (evt.currentTarget === evt.target) {
-      closeModal();
-    }
-  };
   return createPortal(
     <s.Backdrop onClick={handleBackdropClick}>
       <s.ModalField>
         <s.CloseButton type="button" onClick={closeModal}>
-          <s.IconBtn />
+          <s.IconBtn>
+            <img
+              src={close_cross_icon}
+              alt="close icon"
+              width="15px"
+              height="15px"
+            />
+          </s.IconBtn>
         </s.CloseButton>
         {children}
       </s.ModalField>
