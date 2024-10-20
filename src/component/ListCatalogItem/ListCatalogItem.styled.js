@@ -75,7 +75,7 @@ export const ButtonLearnMore = styled.button`
   justify-content: center;
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.accent};
-  border: none;
+  border: 2px;
 
   padding: 12px 0;
   border-radius: 12px;
@@ -86,10 +86,12 @@ export const ButtonLearnMore = styled.button`
 
   transition: background-color 250ms
     ${({ theme }) => theme.timingFunction.cubicBezier};
+  text-decoration: none;
 
   &:hover,
   &:focus,
   &.active {
     background-color: ${({ theme }) => theme.colors.accentHover};
+    text-decoration: none;
   }
 `;

@@ -2,7 +2,6 @@ import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import { ReactComponent as CloseIconBtn } from '../../icons/x-close.svg';
 
-
 export const DivSidebar = styled.div`
   background-color: ${({ theme }) => theme.colors.colorCar};
   /* height: 550px; */
@@ -19,13 +18,12 @@ export const DivSidebar = styled.div`
   position: absolute;
 
   top: 30px;
-  left: ${isOpen => (isOpen ? '0px' : '0')};
+  left: ${isOpen => (isOpen ? '30px' : '0')};
   transition: transform 1s ease-out;
   transform: ${isOpen => (isOpen ? 'translateX(0%)' : 'translateX(-100%)')};
 `;
 
-export const Sidebar = styled.aside`
-`;
+export const Sidebar = styled.aside``;
 
 export const List = styled.ul`
   li {
@@ -50,12 +48,17 @@ export const StyledLink = styled(NavLink)`
   line-height: 1.25;
 
   transition: color 250ms ${({ theme }) => theme.timingFunction.cubicBezier},
-    background-color 250ms ${({ theme }) => theme.timingFunction.cubicBezier};
+    background-color 250ms ${({ theme }) => theme.timingFunction.cubicBezier},
+    box-shadow 250ms ${({ theme }) => theme.timingFunction.cubicBezier};
 
-  &:focus,
   &.active {
     color: ${({ theme }) => theme.colors.white};
-    background-color: ${({ theme }) => theme.colors.colorCar};
+  }
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.bgInput};
+    color: ${({ theme }) => theme.colors.colorCarAccent};
+    box-shadow: rgba(0, 0, 0, 0.12) 4px 1px 4px, rgba(0, 0, 0, 0.06) 0px 4px 4px,
+      rgba(0, 0, 0, 0.16) 1px 4px 6px;
   }
 `;
 

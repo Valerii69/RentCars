@@ -11,8 +11,9 @@ export const Box = styled.div`
 
 export const Title = styled.h1`
   font-weight: 600;
-  font-size: 80px;
+  font-size: 50px;
   line-height: 1.33;
+ 
 
   color: ${({ theme }) => theme.colors.white};
   margin-bottom: 30px;
@@ -52,16 +53,16 @@ export const Headline = styled.h2`
 
 export const FlexContainer = styled.section`
   display: flex;
-  padding: 30px 100px;
-  justify-content: center;
-  width: 1440px;
-  /* height: 1926px; */
+  padding: 30px 30px;
+  justify-content: space-evenly;
+  max-width: 1440px;
+  height: 800px;
   flex-direction: column;
 
   align-items: center;
   background-image: url(${carImage});
   background-size: cover;
-  background-position: center center center;
+  background-position: center left;
   border-radius: 24px;
   box-shadow: rgba(0, 0, 0, 0.12) 4px 1px 4px, rgba(0, 0, 0, 0.06) 0px 4px 4px,
     rgba(0, 0, 0, 0.16) 1px 4px 6px;

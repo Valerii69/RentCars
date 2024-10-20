@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef,memo } from 'react';
 import * as s from './Sidebar.styled';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
@@ -49,4 +49,4 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
   );
 };
 
-export default Sidebar;
+export default memo(Sidebar);

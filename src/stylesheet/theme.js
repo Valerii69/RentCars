@@ -5,7 +5,7 @@ const theme = {
     secondary: '#12141780', //rgba(18, 20, 23, 0.50);
     white: '#ffffff', //rgba(255, 255, 255, 1);
     accent: '#3470FF', //rgba(52, 112, 255, 1);
-    accentHover: '#0B44CD', //rgba(11, 68, 205, 1);
+    accentHover: '#4a90e2 ', //rgba(11, 68, 205, 1);
     placeholder: '#8A8A89', //rgba(138, 138, 137, 1);
     additionalModal: '#363535',
     lineDivider: 'rgba(18, 20, 23, 0.10)',
@@ -15,7 +15,8 @@ const theme = {
     bgAdditionalModal: '#F9F9F9',
     bgHero: 'rgba(205 218 239)',
     colorHero: '#1e73a3',
-    colorCar: '#f4b10a',
+    colorCar: '#e67e22',
+    colorCarAccent:'#e36d05',
     borderPriseList: '#12147b0d',
   },
 

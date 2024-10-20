@@ -22,7 +22,7 @@ export const ListCatalogItems = ({ car }) => {
   return (
     <s.Card>
       <s.Thumb>
-        <s.Img src={car.img} alt="Car" />
+        <s.Img src={car.img} alt="Car"  width="100" height="75" />
       </s.Thumb>
       <s.IconContainer
         onClick={e => {
@@ -40,8 +40,9 @@ export const ListCatalogItems = ({ car }) => {
         <s.Price>{car.rentalPrice}</s.Price>
       </s.Title>
       <s.Info>
-        {parseAddress(car.address).city} | {parseAddress(car.address).country} | {car.rentalCompany} | {car.type} |  {(car.mileage / 1000).toFixed(3).replace('.', ',')}{' '} | {' '}
-        
+        {parseAddress(car.address).city} | {parseAddress(car.address).country} |{' '}
+        {car.rentalCompany} | {car.type} |{' '}
+        {(car.mileage / 1000).toFixed(3).replace('.', ',')} |{' '}
         {car.accessories[2]}
       </s.Info>
       <s.ButtonLearnMore onClick={showModal}>Learn more</s.ButtonLearnMore>

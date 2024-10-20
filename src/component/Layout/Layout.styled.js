@@ -4,10 +4,10 @@ import logo from '../../images/logo.png';
 export const Box = styled.div`
   margin-left: auto;
   margin-right: auto;
-  padding: 0 128px;
+  padding: 0 20px;
 
   /* min-height: 100vh; */
-  background: #f5f9ff;
+  /* background: #b7c4bb; */
   background-size: 100%;
 
   display: flex;

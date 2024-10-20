@@ -45,3 +45,12 @@ export const DivImg = styled.div`
     margin-left: 20px;
   }
 `;
+export const HeaderP = styled.div`
+  transform:  scale(1.2, ) ;
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin-left: 20px;
+  color: ${({ theme }) => theme.colors.colorCar};
+`;

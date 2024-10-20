@@ -19,6 +19,7 @@ export const Button = styled.div`
   padding: 12px, 99px, 12px, 99px;
   margin-bottom: 30px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -27,5 +28,6 @@ export const Button = styled.div`
     -moz-box-shadow: 5px 5px 7px 1px ${({ theme }) => theme.colors.white};
     box-shadow: 5px 5px 7px 1px ${({ theme }) => theme.colors.white};
     cursor: pointer;
+    text-decoration: none;
   }
 `;

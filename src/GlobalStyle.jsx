@@ -30,13 +30,13 @@ li {
 }
 
 :root {
-  --accent-color-bg-color: #ffffff;
-  --accent-color-text-color: #121417;
+  --accent-color-bg-color: #f0f0f0;
+  --accent-color-text-color: #333333;
 }
 
 :root.dark {
-  --accent-color-bg-color: #0f172a;
-  --accent-color-text-color: #ffffff;
+  --accent-color-bg-color: #333333;
+  --accent-color-text-color: #f0f0f0;
 }
 
 /* --------- Fonts ------------------------------------- */
@@ -141,7 +141,9 @@ p {
   margin: 0;
   padding: 0;
 }
-
+a {
+text-decoration: none; /* Скасовуємо підкреслення у посилань */
+}
 img {
   display: block;
   height: auto;

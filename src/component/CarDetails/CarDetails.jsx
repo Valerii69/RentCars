@@ -26,7 +26,7 @@ export const CarDetails = ({
   return (
     <s.Details>
       <s.Thumb>
-        <s.Img src={img} alt="Car" />
+        <s.Img src={img} alt="Car" width="100" height="75" />
       </s.Thumb>
 
       <s.Title>
@@ -63,7 +63,8 @@ export const CarDetails = ({
       <s.Conditions>
         <s.Box>{parseConditions(rentalConditions).arr[2]}</s.Box>
         <s.Box>
-          Mileage: <s.Accent>{(mileage / 1000).toFixed(3).replace('.', ',')}</s.Accent>
+          Mileage:{' '}
+          <s.Accent>{(mileage / 1000).toFixed(3).replace('.', ',')}</s.Accent>
         </s.Box>
         <s.Box>
           Price: <s.Accent>{rentalPrice}</s.Accent>
