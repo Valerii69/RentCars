@@ -14,8 +14,7 @@ export const Layout = () => {
   };
 
   const toggleModal = () => {
-    console.log('Modal toggled'); // Додайте лог, щоб перевірити чи викликається функція
-    setShowModal(prevState => !prevState); // Перемикання модального вікна
+    setShowModal(prevState => !prevState); 
   };
 
   return (

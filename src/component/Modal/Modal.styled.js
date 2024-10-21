@@ -12,16 +12,14 @@ export const Backdrop = styled.div`
   justify-content: center;
   align-items: center;
 
-  /* background-color: ${({ theme }) => theme.colors.secondary};  */
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 999; // доданий високий z-index
+  z-index: 999; 
 
 `;
 
 export const ModalField = styled.div`
   position: relative;
   width: 541px;
-  /* height: 752px; */
   padding: 50px;
 
   border-radius: 24px;
