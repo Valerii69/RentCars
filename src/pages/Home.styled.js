@@ -45,11 +45,33 @@ export const Headline = styled.h2`
   word-spacing: 3px;
   /* margin-bottom: 8px; */
 `;
+export const SocialContainer = styled.div`
+  display: flex;
+  justify-content: center;
+flex-direction:row;
+gap:20px;
+`;
 
-// export const FlexContainer = styled.div`
-//   margin-bottom: 20px;
-//   display: flex;
-// `;
+export const SocialArray = styled.div`
+  margin-bottom: 20px;
+  width: 44px;
+  height: 44px;
+
+  align-items: center;
+  border-radius: 50%;
+   transition: box-shadow 250ms cubic-bezier(0.4, 0.3, 0.2, 0.3); /* Плавний перехід для тіні */
+
+  &:hover,
+  &:focus {
+    box-shadow: 5px 5px 7px 1px ${({ theme }) => theme.colors.white};
+    cursor: pointer;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+`;
 
 export const FlexContainer = styled.section`
   display: flex;
