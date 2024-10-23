@@ -1,6 +1,8 @@
 import { Title, Box, Description, Span, FlexContainer } from './Home.styled';
 import { Button } from 'component/ButtonSmall/ButtonSmall.styled';
 import { Link } from 'react-router-dom';
+import { ReactComponent as Instagram } from '../../src/icons/instagram.svg';
+import { ReactComponent as InstagramHover } from '../../src/icons/instagramHover.svg';
 
 const Home = () => {
   return (
@@ -16,8 +18,13 @@ const Home = () => {
             the perfect vehicle to suit your needs.
           </Description>
           <Link to="/catalog">
-            <Button>Learn more</Button>
-          </Link>
+            <Button>Learn more</Button> </Link>
+          {/* <>
+          <Instagram  />
+            <InstagramHover />
+          </> */}
+         
+        
         </FlexContainer>
       </Box>
     </>
