@@ -7,8 +7,8 @@ import {
   FlexContainer,
   SocialContainer,
   SocialArray,
+  Button,
 } from './Home.styled';
-import { Button } from 'component/ButtonSmall/ButtonSmall.styled';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Instagram } from '../../src/icons/instagram.svg';
 import { ReactComponent as InstagramHover } from '../../src/icons/instagramHover.svg';
@@ -35,19 +35,32 @@ const Home = () => {
             <Button>Learn more</Button>{' '}
           </Link>
           <SocialContainer>
-            <SocialArray
-              onMouseEnter={() => setIsInstagramHovered(true)}
-              onMouseLeave={() => setIsInstagramHovered(false)}
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {isInstagramHovered ? <InstagramHover /> : <Instagram />}
-            </SocialArray>
+              <SocialArray
+                onMouseEnter={() => setIsInstagramHovered(true)}
+                onMouseLeave={() => setIsInstagramHovered(false)}
+              >
+                {isInstagramHovered ? <InstagramHover /> : <Instagram />}
+              </SocialArray>
+            </a>
 
-            <SocialArray
-              onMouseEnter={() => setIsTelegramHovered(true)}
-              onMouseLeave={() => setIsTelegramHovered(false)}
+            {/* Посилання для Telegram */}
+            <a
+              href="https://www.telegram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {isTelegramHovered ? <TelegramHover /> : <Telegram />}
-            </SocialArray>
+              <SocialArray
+                onMouseEnter={() => setIsTelegramHovered(true)}
+                onMouseLeave={() => setIsTelegramHovered(false)}
+              >
+                {isTelegramHovered ? <TelegramHover /> : <Telegram />}
+              </SocialArray>
+            </a>
           </SocialContainer>
         </FlexContainer>
       </Box>

@@ -22,7 +22,7 @@ export const ListCatalogItems = ({ car }) => {
   return (
     <s.Card>
       <s.Thumb>
-        <s.Img src={car.img} alt="Car"  width="100" height="75" />
+        <s.Img src={car.img} alt="Car" width="100" height="75" />
       </s.Thumb>
       <s.IconContainer
         onClick={e => {

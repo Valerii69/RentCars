@@ -7,6 +7,7 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
 `;
 
 export const Thumb = styled.div`
@@ -37,7 +38,8 @@ export const Img = styled.img`
 
 export const Title = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  margin-left: 2px;
 `;
 
 export const Name = styled.p`
@@ -66,6 +68,8 @@ export const Info = styled.p`
   line-height: 1.5;
   word-spacing: 3px;
   margin-bottom: auto;
+  margin-left: 3px;
+  margin-right: 3px;
 `;
 
 export const ButtonLearnMore = styled.button`
